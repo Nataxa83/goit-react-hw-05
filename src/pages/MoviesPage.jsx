@@ -1,8 +1,13 @@
 
+
 const MoviesPage = () => {
-  return (
-    <div>MoviesPage</div>
-  )
+  
+
+    
+return (
+<p>Movies Page</p>
+);
 }
+
 
 export default MoviesPage
