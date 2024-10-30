@@ -60,6 +60,7 @@ export const getMovieReviews = async (movieId) => {
     const option = {
         params: {
             language: 'en-US',
+            page: 1,
         }
     }
     const { data } = await movieApiInstance.get(`/movie/${movieId}/reviews`, option);

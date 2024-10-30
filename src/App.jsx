@@ -9,17 +9,22 @@ import { Route, Routes } from "react-router-dom";
 
 
 const App = () => {
-  return <div>
+  return ( 
+  <div>
+    <header> 
+      <Navigation />
+    </header>
 
-    <Navigation />
-
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/movies" element={<MoviesPage />} />
-      <Route path="/movies" element={<MovieDatailsPage />} />
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
-  </div>;
+    <main>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/movies" element={<MoviesPage />} />
+        <Route path="/movies" element={<MovieDatailsPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </main>
+  </div>
+  );
 };
 
 export default App;

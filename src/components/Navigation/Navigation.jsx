@@ -8,14 +8,12 @@ const isActiveClasses = ({ isActive }) =>
 const Navigation = () => {
   
     return (
-        <header>
-            <div className={css.container}>
-                <nav className={css.nav}>
-                    <NavLink to="/" className={isActiveClasses}>Home</NavLink>
-                    <NavLink to="/movies" className={isActiveClasses}>Movies</NavLink>
-                </nav>
-            </div>
-        </header>
+        <div className={css.container}>
+            <nav className={css.nav}>
+                <NavLink to="/" className={isActiveClasses}>Home</NavLink>
+                <NavLink to="/movies" className={isActiveClasses}>Movies</NavLink>
+            </nav>
+        </div>
     )
 }
 
