@@ -39,7 +39,7 @@ return (
         {error !== null ? <p>{error}</p> :
         <h2 className={css.listTitle}>Trending Movies Today</h2>}
         {loading && <Loader />}
-        {movies.length > 0 && <MovieList array={movies} /> }
+        {movies.length > 0 && <MovieList movies={movies} /> }
     </div>
 );
 }

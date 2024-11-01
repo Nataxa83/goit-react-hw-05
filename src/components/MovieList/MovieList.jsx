@@ -1,17 +1,17 @@
 import MovieItem from '../MovieItem/MovieItem';
 import css from "./MovieList.module.css"
 
-const MovieList = ({array}) => {
+const MovieList = ({movies}) => {
 
     return (
 
         <ul className={css.movieList}>
-            {array.map((ar)=> {
+            {movies.map(({id, title, poster_path})=> {
                 return ( 
-                    <li key={ar.id}>
-                        <MovieItem id={ar.id} 
-                                    title={ar.title} 
-                                    poster_path={ar.poster_path}/>
+                    <li key={id}>
+                        <MovieItem id={id} 
+                                    title={title} 
+                                    poster_path={poster_path}/>
                     </li>)
             })}
         </ul>
