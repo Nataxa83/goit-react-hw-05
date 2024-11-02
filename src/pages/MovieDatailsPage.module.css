@@ -1,0 +1,56 @@
+.container{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    background-color: rgb(244, 203, 150);
+}
+
+.movieInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* align-items: center; */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.title{
+    color: rgb(224, 90, 41);
+}
+
+.movieItem{
+    min-width: 300px;
+}
+
+.info {
+  font-size: medium;
+  font-weight: 700;
+}
+
+.dopInfo {
+  font-size: medium;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+.link {
+    display: inline-block;
+margin: 10px;
+  color: black;
+  font-size: 16px;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  padding: 10px 8px;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  transition:
+    color 250ms linear,
+    font-weight 250ms linear,
+    border 250ms linear,
+    background-color 250ms linear;
+}
+
+.link:hover,
+.link:focus{
+    background-color: rgb(232, 110, 66);
+    color: whitesmoke;
+}
