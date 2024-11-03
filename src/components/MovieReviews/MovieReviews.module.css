@@ -1,0 +1,27 @@
+.reviewItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.nickName {
+    font-weight: 600;
+    color: black;
+}
+
+.author {
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(224, 90, 41);
+}
+
+.content {
+text-align: justify;   
+}
+
+.notReview {
+    padding-left: 10px;
+}

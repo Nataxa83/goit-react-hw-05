@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 
-import { getMovieDetails } from "../servises/api";
+import { getMovieDetails } from "../services/api";
 
 import css from "./MovieDatailsPage.module.css"
 
-import MovieItem from "../components/MovieItem/MovieItem";
 import Loader from "../components/Loader/Loader";
+import MovieItem from "../components/MovieItem/MovieItem";
 import NotFoundPage from "./NotFoundPage";
 
 const MovieDatailsPage = () => {
@@ -15,27 +15,25 @@ const MovieDatailsPage = () => {
   const [loading, setLoading] = useState(false);
 
   const { movieId } = useParams("movieId");
+  const location = useLocation();
   const backLinkRef = useRef(location.state?.from ?? "/movies");
 
 
   useEffect(() => {
     const fetchMovieById = async () => {
-try {
+    try {
     setLoading(true);
     const  data  = await getMovieDetails(movieId);
-    setMovieItem(data);
+    setMovieItem(data);    
 
-    
-
-} catch (error) {
-    setError(error.message);
-    console.log(error.message);
-
-}
-finally {
-    setLoading(false);
-}
-    }
+    } catch (error) {
+      setError(error.message);
+      console.log(error.message);
+      }
+      finally {
+      setLoading(false);
+      }
+  }
     fetchMovieById()
 }, [movieId])
 console.log(movieItem)
@@ -51,7 +49,7 @@ console.log(movieItem)
       </Link>
           <div className={css.movieInfo}> 
 
-          <div className={css.movieItem}>
+          <div className={css.movieItem} >
           <MovieItem
             id={movieItem.id}
             poster_path={movieItem.poster_path}
@@ -80,7 +78,7 @@ console.log(movieItem)
               <Link className={css.link} to="cast">Cast</Link>
               <Link className={css.link} to="reviews">Reviews</Link>
         
-        
+        <Outlet />
         </div>
     
         ):<NotFoundPage/>}

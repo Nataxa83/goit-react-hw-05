@@ -3,9 +3,13 @@ import MoviesPage from "./pages/MoviesPage";
 import MovieDatailsPage from "./pages/MovieDatailsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
+import MovieCast from "./components/MovieCast/MovieCast";
+// import MovieReviews from "./components/MovieReviews/MovieReviews";
+
 import Navigation from "./components/Navigation/Navigation";
 
 import { Route, Routes } from "react-router-dom"; 
+import MovieReviews from "./components/MovieReviews/MovieReviews";
 
 
 const App = () => {
@@ -19,7 +23,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />
-        <Route path="/movies/:movieId" element={<MovieDatailsPage />} />
+        <Route path="/movies/:movieId" element={<MovieDatailsPage />} > 
+          <Route path="cast" element={<MovieCast />} />
+          <Route path="reviews" element={<MovieReviews />} />
+        </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </main>
