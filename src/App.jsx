@@ -1,15 +1,14 @@
-import HomePage from "./pages/HomePage";
-import MoviesPage from "./pages/MoviesPage";
-import MovieDatailsPage from "./pages/MovieDatailsPage";
-import NotFoundPage from "./pages/NotFoundPage";
+import HomePage from "./pages/HomePage/HomePage";
+import MoviesPage from "./pages/MoviesPage/MoviesPage";
+import MovieDetailsPage from "./pages/MovieDetailsPage/MovieDetailsPage";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
 import MovieCast from "./components/MovieCast/MovieCast";
-// import MovieReviews from "./components/MovieReviews/MovieReviews";
+import MovieReviews from "./components/MovieReviews/MovieReviews";
 
 import Navigation from "./components/Navigation/Navigation";
 
 import { Route, Routes } from "react-router-dom"; 
-import MovieReviews from "./components/MovieReviews/MovieReviews";
 
 
 const App = () => {
@@ -23,7 +22,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/movies" element={<MoviesPage />} />
-        <Route path="/movies/:movieId" element={<MovieDatailsPage />} > 
+        <Route path="/movies/:movieId" element={<MovieDetailsPage />} > 
           <Route path="cast" element={<MovieCast />} />
           <Route path="reviews" element={<MovieReviews />} />
         </Route>

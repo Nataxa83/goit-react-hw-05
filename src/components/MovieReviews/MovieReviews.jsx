@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
-import NotFoundPage from "../../pages/NotFoundPage";
+import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
 import { getMovieReviews } from "../../services/api";
 import css from "./MovieReviews.module.css";
 

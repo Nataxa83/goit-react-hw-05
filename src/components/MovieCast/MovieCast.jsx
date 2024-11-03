@@ -5,7 +5,7 @@ import { getMovieCast } from "../../services/api";
 import css from "./MovieCast.module.css";
 import noCastImg from "../../images/noCastImg.png";
 import Loader from "../Loader/Loader";
-import NotFoundPage from "../../pages/NotFoundPage";
+import NotFoundPage from "../../pages/NotFoundPage/NotFoundPage";
 const MovieCast = () => {
 	const { movieId } = useParams();
 	const [movieCast, setMovieCast] = useState(null);

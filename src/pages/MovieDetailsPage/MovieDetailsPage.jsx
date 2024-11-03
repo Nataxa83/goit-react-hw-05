@@ -1,15 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, Outlet, useLocation, useParams } from "react-router-dom";
 
-import { getMovieDetails } from "../services/api";
+import { getMovieDetails } from "../../services/api";
 
-import css from "./MovieDatailsPage.module.css"
+import css from "./MovieDetailsPage.module.css"
 
-import Loader from "../components/Loader/Loader";
-import MovieItem from "../components/MovieItem/MovieItem";
-import NotFoundPage from "./NotFoundPage";
+import Loader from "../../components/Loader/Loader";
+import MovieItem from "../../components/MovieItem/MovieItem";
+import NotFoundPage from "../NotFoundPage/NotFoundPage";
 
-const MovieDatailsPage = () => {
+const MovieDetailsPage = () => {
   const [movieItem, setMovieItem] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -87,4 +87,4 @@ console.log(movieItem)
   )
 };
 
-export default MovieDatailsPage
+export default MovieDetailsPage

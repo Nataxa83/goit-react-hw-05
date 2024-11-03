@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
-import { getTrendingMovies } from "../services/api";
+import { getTrendingMovies } from "../../services/api";
 
-import MovieList from "../components/MovieList/MovieList";
-import Loader from "../components/Loader/Loader";
+import MovieList from "../../components/MovieList/MovieList";
+import Loader from "../../components/Loader/Loader";
 
-import css from "../pages/HomePage.module.css"
+import css from "./HomePage.module.css"
   
 const HomePage = () => {
 
