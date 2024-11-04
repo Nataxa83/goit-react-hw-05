@@ -1,29 +1,30 @@
 import  { useState } from 'react'
 import css from './SearchBar.module.css'
 
-const SearchBar = (onSubmit) => {
-    const [query, setQuery] = useState("");
+const SearchBar = ({onSubmit}) => {
+    const [userValue, setUserValue] = useState("");
 
-    const handleChangeQuery = (e) => {
-      setQuery(e.target.value);
+    const onChangeValue = (e) => {
+      setUserValue(e.target.value.trim());
     };
 
-    const handleSubmitForm = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(query);
-        setQuery("");
+        onSubmit(userValue);
+        setUserValue("");
     }
 
   return (
     <div className={css.searchForm}>
-    <form onSubmit={handleSubmitForm} className={css.form}>
+    <form onSubmit={handleSubmit} className={css.form}>
         <input
             type="text"
+            name="search"
             autoComplete="off"
             autoFocus
             placeholder="Search movies"
-            value={query}
-            onChange={handleChangeQuery}
+            value={userValue}
+            onChange={onChangeValue}
             className={css.input}
         />
          <button className={css.btn} type="submit" >

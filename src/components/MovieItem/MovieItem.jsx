@@ -20,7 +20,6 @@ const MovieItem = ({id, title, poster_path
         alt={title} >
         </img>
         
-        <p className={css.movieTitle}>{title}</p>
             </Link>
     
     </div>

@@ -5,4 +5,5 @@
     gap: 10px;
     background-color: rgb(244, 203, 150);
     padding: 10px;
+    min-width: 355px;
 }

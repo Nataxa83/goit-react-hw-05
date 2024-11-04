@@ -3,13 +3,10 @@
     flex-direction: column;
     align-items: center;
     max-width: 300px;
-    /* height: auto; */
     border-radius: 10px;
     padding: 10px;
     border: 1px solid black;
     background-color: whitesmoke;
-    box-sizing: border-box;
-
 }
 
 .movieItem:hover {
@@ -20,15 +17,5 @@
 .movieImg {
     width: 250px;
     height: 350px;
-
 }
 
-.movieTitle {
-    font-size: 18px;
-    font-weight: 650;
-    text-align: center;
-    margin-top: 10px;
-    color: rgb(232, 110, 66);
-    white-space: normal;
-    overflow-wrap:break-word;
-}
