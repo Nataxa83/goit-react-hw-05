@@ -1,0 +1,12 @@
+.errorMessage {
+    color: red;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.error {
+    color: rgb(214, 119, 52);   
+    font-size: 24px;
+    font-style: italic;  
+}

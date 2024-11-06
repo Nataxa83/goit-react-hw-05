@@ -4,8 +4,8 @@ import css from "./NotFoundPage.module.css"
 const NotFoundPage = () => {
   return (
     <div className={css.notFoundPage}>
-        <Link className={css.link} to="/movies">
-          Go back
+        <Link className={css.link} to="/">
+          Home
         </Link>
         <p className={css.text}>Page not found</p>
       </div>
