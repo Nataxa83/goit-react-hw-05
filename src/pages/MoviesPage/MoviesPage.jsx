@@ -6,11 +6,13 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import MovieList from "../../components/MovieList/MovieList";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Loader from "../../components/Loader/Loader";
+import toast, { Toaster } from "react-hot-toast";
 
 
 
 const MoviesPage = () => {
-    const [filteredMovies, setFilteredMovies] = useState([]);const [searchParams, setSearchParams] = useSearchParams();
+    const [filteredMovies, setFilteredMovies] = useState([]);
+    const [searchParams, setSearchParams] = useSearchParams();
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
@@ -27,8 +29,15 @@ const MoviesPage = () => {
             try {
             setLoading(true);
             const  { results }  = await getSearchMovies(searchValue);
-            setFilteredMovies(results);    
-
+            setFilteredMovies(results);   
+            
+            if (results.length === 0) {
+                toast.error("No movies found", {
+                    duration: 2000,
+                    position: "top-center",
+                    style: { marginTop: 135, backgroundColor: "coral", color: "white" }
+                });
+            }
             } catch (error) {
             setError(error.message);
             console.log(error.message);
@@ -43,6 +52,7 @@ const MoviesPage = () => {
         return (
             <div>
                 <SearchBar onSubmit={onSubmit} />
+                <Toaster/>
 
                 {error !== null ? 
                 (<ErrorMessage error={error} />) :

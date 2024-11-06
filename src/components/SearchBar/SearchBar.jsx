@@ -6,7 +6,7 @@ const SearchBar = ({onSubmit}) => {
     const [userValue, setUserValue] = useState("");
 
     const onChangeValue = (e) => {
-      setUserValue(e.target.value.trim());
+      setUserValue(e.target.value);
     };
 
     const handleSubmit = (e) => {
@@ -33,7 +33,6 @@ const SearchBar = ({onSubmit}) => {
               type="text"
               name="search"
               autoComplete="off"
-              // readOnly={true}
               autoFocus
               placeholder="Search movies"
               value={userValue}
