@@ -6,8 +6,8 @@ import { getMovieDetails } from "../../services/api";
 import css from "./MovieDetailsPage.module.css"
 
 import Loader from "../../components/Loader/Loader";
+import MovieItem from "../../components/MovieItem/MovieItem";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
-import { MovieItemNotAnimated } from "../../components/MovieItem/MovieItem";
 
 const MovieDetailsPage = () => {
   const [movieItem, setMovieItem] = useState([]);
@@ -50,7 +50,7 @@ const MovieDetailsPage = () => {
               <Link className={css.link} to={backLinkRef.current}>Go back</Link>
               <div className={css.movieInfo}> 
                 <div className={css.movieItem} >
-                  <MovieItemNotAnimated
+                  <MovieItem
                     id={movieItem.id}
                     poster_path={movieItem.poster_path}
                   />
