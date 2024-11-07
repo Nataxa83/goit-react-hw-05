@@ -6,8 +6,6 @@ const MovieItem = ({id, title, poster_path}) => {
 
     const location = useLocation();
     return (
-      <div className={css.movieItem}>
-
         <Link to={`/movies/${id}`} state={{ from: location}} >
 
           <img 
@@ -20,9 +18,6 @@ const MovieItem = ({id, title, poster_path}) => {
           </img>
         
         </Link>
-    
-      </div>
-   
     )
 }
 

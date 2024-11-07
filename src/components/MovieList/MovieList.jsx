@@ -9,9 +9,11 @@ const MovieList = ({movies}) => {
             {movies.map(({id, title, poster_path})=> {
                 return ( 
                     <li key={id}>
+                        <div  className={css.movieItem}>
                         <MovieItem id={id} 
                                     title={title} 
                                     poster_path={poster_path}/>
+                        </div>
                     </li>)
             })}
         </ul>
